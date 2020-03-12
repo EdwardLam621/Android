@@ -2,6 +2,8 @@ package com.example.android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                // to be implemented
+                Context context = view.getContext();
+                Intent intent = new Intent(context, ItemModelListActivity.class);
+                context.startActivity(intent);
             }
         });
     }
