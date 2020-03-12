@@ -26,12 +26,14 @@ public class DummyContent {
 
     private static final int COUNT = 25;
 
-    //static {
+    static {
         // Add some sample items.
-    //    for (int i = 1; i <= COUNT; i++) {
-    //        addItemModel(createItemModel(i));
-    //    }
-    //}
+        for (int i = 1; i <= COUNT; i++) {
+            addItemModel(new ItemModel("Beer", "Don't grab my beer", "", 1, 5, 1));
+            addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "", 1, 1, 9));
+            addItemModel(new ItemModel("Final example", "Time to study hard", "", 5, 1, 7));
+        }
+    }
 
     private static void addItemModel(ItemModel item) {
         ITEMS.add(item);
