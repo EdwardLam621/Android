@@ -28,9 +28,9 @@ public class DummyContent {
 
     static {
         // Add some sample items
-        addItemModel(new ItemModel("Beer", "Don't grab my beer", "", 1, 5, 1));
-        addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "", 1, 1, 9));
-        addItemModel(new ItemModel("Final example", "Time to study hard", "", 5, 1, 7));
+        addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "mac", 1, 1, 9));
+        addItemModel(new ItemModel("Final example", "Time to study hard", "paper", 5, 1, 7));
+        addItemModel(new ItemModel("Beer", "Don't grab my beer", "beer", 1, 5, 1));
     }
 
     private static void addItemModel(ItemModel item) {

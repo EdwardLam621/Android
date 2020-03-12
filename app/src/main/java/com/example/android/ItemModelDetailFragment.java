@@ -1,6 +1,7 @@
 package com.example.android;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.google.android.material.appbar.CollapsingToolbarLayout;
@@ -10,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.android.ItemModel.DummyContent;
@@ -53,6 +55,16 @@ public class ItemModelDetailFragment extends Fragment {
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
                 appBarLayout.setTitle(mItem.Name);
+
+                // The id on the layout
+                ImageView image = ((ImageView) activity.findViewById(R.id.imageView));
+                // Get the image from the drawable folder
+                String uri = "@drawable/" + mItem.ImageURL;  // where myresource (without the extension) is the file
+                int imageResource = getResources().getIdentifier(uri, "drawable", "com.example.android");
+                Drawable res = getResources().getDrawable(imageResource);
+                image.setImageDrawable(res);
+
+
             }
         }
     }
