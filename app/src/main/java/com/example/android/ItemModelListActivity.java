@@ -76,12 +76,12 @@ public class ItemModelListActivity extends AppCompatActivity {
             extends RecyclerView.Adapter<SimpleItemRecyclerViewAdapter.ViewHolder> {
 
         private final ItemModelListActivity mParentActivity;
-        private final List<DummyContent.DummyItem> mValues;
+        private final List<DummyContent.ItemModel> mValues;
         private final boolean mTwoPane;
         private final View.OnClickListener mOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DummyContent.DummyItem item = (DummyContent.DummyItem) view.getTag();
+                DummyContent.ItemModel item = (DummyContent.ItemModel) view.getTag();
                 if (mTwoPane) {
                     Bundle arguments = new Bundle();
                     arguments.putString(ItemModelDetailFragment.ARG_ITEM_ID, item.id);
@@ -101,7 +101,7 @@ public class ItemModelListActivity extends AppCompatActivity {
         };
 
         SimpleItemRecyclerViewAdapter(ItemModelListActivity parent,
-                                      List<DummyContent.DummyItem> items,
+                                      List<DummyContent.ItemModel> items,
                                       boolean twoPane) {
             mValues = items;
             mParentActivity = parent;
@@ -118,7 +118,7 @@ public class ItemModelListActivity extends AppCompatActivity {
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mIdView.setText(mValues.get(position).id);
-            holder.mContentView.setText(mValues.get(position).content);
+            holder.mContentView.setText(mValues.get(position).Description);
 
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
