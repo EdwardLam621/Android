@@ -1,4 +1,4 @@
-package com.example.android.dummy;
+package com.example.android.ItemModel;
 
 import java.util.ArrayList;
 import java.util.HashMap;

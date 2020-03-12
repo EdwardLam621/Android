@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.android.dummy.DummyContent;
+import com.example.android.ItemModel.DummyContent;
 
 /**
  * A fragment representing a single ItemModel detail screen.
