@@ -1,5 +1,7 @@
 package com.example.android.ItemModel;
 
+import com.example.android.ItemLocationEnum;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,9 +30,9 @@ public class DummyContent {
 
     static {
         // Add some sample items
-        addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "mac", 1, 1, 9));
-        addItemModel(new ItemModel("Final example", "Time to study hard", "paper", 5, 1, 7));
-        addItemModel(new ItemModel("Beer", "Don't grab my beer", "beer", 1, 5, 1));
+        addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "mac", 1, 1, 9, ItemLocationEnum.PrimaryHand));
+        addItemModel(new ItemModel("Final example", "Time to study hard", "paper", 5, 1, 7, ItemLocationEnum.Feet));
+        addItemModel(new ItemModel("Beer", "Don't grab my beer", "beer", 1, 5, 1, ItemLocationEnum.OffHand));
     }
 
     private static void addItemModel(ItemModel item) {
@@ -63,7 +65,7 @@ public class DummyContent {
         public final String Description;
         public final String Guid = id;
         public final String ImageURL;
-
+        public final ItemLocationEnum Location;
 
 
         public ItemModel(String name,
@@ -71,13 +73,15 @@ public class DummyContent {
                          String url,
                          int range,
                          int damage,
-                         int value) {
+                         int value,
+                         ItemLocationEnum location) {
             this.Name = name;
             this.Description = description;
             this.Damage = damage;
             this.ImageURL = url;
             this.Range = range;
             this.Value = value;
+            this.Location = location;
         }
 
         @Override

@@ -44,7 +44,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         <TextView
             android:id="@+id/ItemDetails_ValueLabel"
             style="@style/LabelStyle"
-            android:text="Description : "
+            android:text="Value : "
             />
 
         <TextView
@@ -59,7 +59,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         <TextView
             android:id="@+id/ItemDetails_RangeLabel"
             style="@style/LabelStyle"
-            android:text="Description : "
+            android:text="Range : "
             />
 
         <TextView
@@ -74,7 +74,17 @@ xmlns:android="http://schemas.android.com/apk/res/android">
         <TextView
             android:id="@+id/ItemDetails_DamageLabel"
             style="@style/LabelStyle"
-            android:text="Description : "
+            android:text="Damage : "
+            />
+
+        <TextView
+            android:id="@+id/ItemDetails_DamageValue"
+            style="@style/ValueStyle"/>
+
+        <TextView
+            android:id="@+id/ItemDetails_LocationLabel"
+            style="@style/LabelStyle"
+            android:text="Damage : "
             />
 
         <TextView
