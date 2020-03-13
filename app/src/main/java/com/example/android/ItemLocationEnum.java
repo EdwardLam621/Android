@@ -56,7 +56,7 @@ public enum ItemLocationEnum {
             case Feet:
                 return getString(R.string.Feet);
         }
-        return "Unknown";
+        return getString(R.string.Unknown);
     }
 
     private int intValue;
