@@ -31,7 +31,7 @@ public class DummyContent {
     static {
         // Add some sample items
         addItemModel(new ItemModel("Macbook", "Do your homework, or chill", "mac", 1, 1, 9, ItemLocationEnum.PrimaryHand));
-        addItemModel(new ItemModel("Final example", "Time to study hard", "paper", 5, 1, 7, ItemLocationEnum.Feet));
+        addItemModel(new ItemModel("Final example", "Time to study hard", "test", 5, 1, 7, ItemLocationEnum.Feet));
         addItemModel(new ItemModel("Beer", "Don't grab my beer", "beer", 1, 5, 1, ItemLocationEnum.OffHand));
     }
 
